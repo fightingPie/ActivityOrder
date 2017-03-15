@@ -18,6 +18,7 @@ use Yii;
  * @property string $subscribe_time
  * @property string $remark
  * @property string $groupid
+ * @property string $addTime
  */
 class Activityuser extends \yii\db\ActiveRecord
 {
@@ -37,7 +38,9 @@ class Activityuser extends \yii\db\ActiveRecord
         return [
             [['openid'], 'required'],
             [['sex'], 'string'],
+            [['addTime'], 'safe'],
             [['openid', 'nickname', 'city', 'province', 'country', 'headimgurl', 'subscribe_time', 'remark', 'groupid'], 'string', 'max' => 255],
+            [['openid'], 'unique'],
         ];
     }
 
@@ -58,14 +61,20 @@ class Activityuser extends \yii\db\ActiveRecord
             'subscribe_time' => 'Subscribe Time',
             'remark' => 'Remark',
             'groupid' => 'Groupid',
+            'addTime' => 'Add Time',
         ];
     }
 
     public function findUserByOpenID($openId){
 
-        $User = $this::find()->where(['openid'=>$openId])->one()->toArray();
+        $User = $this::find()->where(['openid'=>$openId])->one();
         if (!empty($User)) return $User;
         return false;
+    }
+
+    public function findUserByOpenIDOne($openId){
+        $User = $this::find()->where(['openid'=>$openId])->one()->toArray();
+        return $User;
     }
 
     public function saveData($UserInfoByWx){

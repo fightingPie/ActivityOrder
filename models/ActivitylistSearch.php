@@ -89,7 +89,7 @@ class ActivitylistSearch extends Activitylist
             $paramsArr = $params['ActivitylistSearch'];
         }
 //        var_dump($paramsArr);exit();
-        $query = "SELECT l.ID,l.`Name`,l.Cost,l.`Status`,l.StartTime,l.EndTime,o.OrderID,o.UserID,IF(o.OrderID IS NOT NULL,'YES','NO') AS HasOder FROM `activitylist` l LEFT JOIN activityorder o ON l.ID = o.ActivityID AND o.UserID = '".$paramsArr['UserID']."'  LEFT JOIN activityuser u ON u.UserID = o.UserID WHERE l.StartTime <= NOW() AND l.EndTime >= NOW() AND `Status` = 'YES' ;";
+        $query = "SELECT l.ID,l.`Name`,l.Cost,l.`Status`,l.StartTime,l.EndTime,o.OrderID,o.UserID,IF(o.OrderID IS NOT NULL,'YES','NO') AS HasOder FROM `activitylist` l LEFT JOIN activityorder o ON l.ID = o.ActivityID AND o.UserID = '".$paramsArr['UserID']."'  LEFT JOIN activityuser u ON u.UserID = o.UserID WHERE l.StartTime <= NOW() AND l.EndTime >= NOW() AND `Status` = 'YES' ORDER BY ID ;";
         $dataProvider = new SqlDataProvider([
         'sql' => $query,
 //            'params' => '',

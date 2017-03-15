@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Activityorder;
 use app\models\Activityuser;
 use Yii;
 use app\models\Activitylist;
@@ -50,14 +51,19 @@ class ActivitylistController extends Controller
     public function actionOrderList()
     {
         $this->layout = "main_website";
-
-//        $appID = Yii::$app->params['WxAppID'];
-//        $secret = Yii::$app->params['WxSecret'];
-//        $UserInfo =  $this->getUserInfo($appID,$secret);
-
+         $session = Yii::$app->session;
+         if (!isset($session['openid']) && empty($session['openid'])){
+             $appID = Yii::$app->params['WxAppID'];
+             $secret = Yii::$app->params['WxSecret'];
+             $UserInfo =  $this->getUserInfo($appID,$secret);
+             $openid = $UserInfo['openid'];
+             $session->set('openid', $openid);
+         }else{
+             $openid = $session['openid'];
+         }
         //test
         $user = new Activityuser();
-        $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+//       $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
         $UserInfo = $user->findUserByOpenID($openid);
         $searchModel = new ActivitylistSearch();
 
@@ -71,9 +77,20 @@ class ActivitylistController extends Controller
         return $this->render('orderlist', [
             'searchModel' => $searchModel,
             'ActivityList' => $ActivityList,
+            'UserInfo' => $UserInfo,
         ]);
     }
 
+    public function actionOrderActivity()
+    {
+        $Parms = Yii::$app->request->get();
+        $Order  = new Activityorder();
+        $res = $Order->findOrderByID($Parms);
+        if (!empty($res)) return 0;
+        $res = $Order->saveData($Parms);
+        if (!$res) return 1;
+        return 1;
+    }
     /**
      * Displays a single Activitylist model.
      * @param integer $id
@@ -179,12 +196,14 @@ class ActivitylistController extends Controller
         $openid = $oauth2['openid'];
 
         $user = new Activityuser();
-        $UserInfo = $user->findUserByOpenID($openid);
-
-        if (empty($UserInfo)){
+        $UserInfoRes = $user->findUserByOpenID($openid);
+//var_dump($UserInfo);exit();
+        if (empty($UserInfoRes)){
             $get_user_info_url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=$access_token&openid=$openid&lang=zh_CN";
             $UserInfoByWx = $this->getJson($get_user_info_url);
             $UserInfo = $user->saveData($UserInfoByWx);
+        }else{
+            $UserInfo = $user->findUserByOpenIDOne($openid);
         }
 
 

@@ -28,6 +28,12 @@ $this->title = 'My Yii Application';
             <?php
                 foreach ($ActivityList as $item)
                 {
+
+                    if ($item['HasOder'] == 'YES') {
+                        $HasOder = '<font class="registered">已 报 名</font>';
+                    }else{
+                        $HasOder = '<font class="sign_up sign_up_'.$item['ID'].'" onclick="signUp('.$item['ID'].','.$UserInfo['UserID'].')">报 名</font>';
+                    }
                     echo '<div class="img_mid">
                 <img src="../image/Activity/0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
                 <div class="content">
@@ -52,9 +58,8 @@ $this->title = 'My Yii Application';
                             <div class="money">
                                 <font>¥'.$item['Cost'].'</font>
                             </div>
-                            <div class="bm_button">
-                                <font class="sign_up" style="display:none">报&nbsp;&nbsp;&nbsp;&nbsp;名</font>
-                                <font class="registered">已&nbsp;&nbsp;&nbsp;&nbsp;报&nbsp;&nbsp;&nbsp;&nbsp;名</font>
+                            <div class="bm_button AO_button_'.$item['ID'].'">
+                                    '.$HasOder.'
                             </div>
                         </div>
                     </div>
