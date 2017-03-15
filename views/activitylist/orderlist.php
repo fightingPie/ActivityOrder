@@ -32,7 +32,7 @@ $this->title = 'My Yii Application';
                     if ($item['HasOder'] == 'YES') {
                         $HasOder = '<font class="registered">已 报 名</font>';
                     }else{
-                        $HasOder = '<font class="sign_up sign_up_'.$item['ID'].'" onclick="signUp('.$item['ID'].','.$UserInfo['UserID'].')">报 名</font>';
+                        $HasOder = '<font class="sign_up" onclick="signUp('.$item['ID'].','.$UserInfo['UserID'].')">报 名</font>';
                     }
                     echo '<div class="img_mid">
                 <img src="../image/Activity/0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
