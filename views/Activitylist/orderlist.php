@@ -29,7 +29,7 @@ $this->title = 'My Yii Application';
                 foreach ($ActivityList as $item)
                 {
                     echo '<div class="img_mid">
-                <img src="../image/activity/0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
+                <img src="../image/Activity/0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
                 <div class="content">
                     <div class="content_left">
                         <div class="content_title">
@@ -63,38 +63,7 @@ $this->title = 'My Yii Application';
                 }
             ?>
 
-            <div class="img_mid">
-                <img src="0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
-                <div class="content">
-                    <div class="content_left">
-                        <div class="content_title">
-                            <font>2017拓景崇明定向</font>
-                        </div>
-                        <div class="content_style">
-                            <div>
-                                <font>拓景</font>
-                            </div>
-                            <div>
-                                <font>定向</font>
-                            </div>
-                        </div>
-                        <div class="time">
-                            <font>时间:2017.3.6-2017.3.8</font>
-                        </div>
-                    </div>
-                    <div class="content_right">
-                        <div class="content_right1">
-                            <div class="money">
-                                <font>¥&nbsp;1</font>
-                            </div>
-                            <div class="bm_button">
-                                <font class="sign_up" style="display:none">报&nbsp;&nbsp;&nbsp;&nbsp;名</font>
-                                <font class="registered">已&nbsp;&nbsp;&nbsp;&nbsp;报&nbsp;&nbsp;&nbsp;&nbsp;名</font>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
 
 

@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Activitylist;
+use yii\data\SqlDataProvider;
 
 /**
  * ActivitylistSearch represents the model behind the search form about `app\models\Activitylist`.
@@ -74,6 +75,27 @@ class ActivitylistSearch extends Activitylist
             ->andFilterWhere(['like', 'Tag', $this->Tag])
             ->andFilterWhere(['like', 'Logo', $this->Logo])
             ->andFilterWhere(['like', 'Desc', $this->Desc]);
+
+        return $dataProvider;
+    }
+    public function searchActList($params)
+    {
+
+
+        $this->load($params);
+
+        $paramsArr = [];
+        if(isset($params['ActivitylistSearch']) && !empty($params['ActivitylistSearch'])){
+            $paramsArr = $params['ActivitylistSearch'];
+        }
+//        var_dump($paramsArr);exit();
+        $query = "SELECT l.ID,l.`Name`,l.Cost,l.`Status`,l.StartTime,l.EndTime,o.OrderID,o.UserID,IF(o.OrderID IS NOT NULL,'YES','NO') AS HasOder FROM `activitylist` l LEFT JOIN activityorder o ON l.ID = o.ActivityID AND o.UserID = '".$paramsArr['UserID']."'  LEFT JOIN activityuser u ON u.UserID = o.UserID WHERE l.StartTime <= NOW() AND l.EndTime >= NOW() AND `Status` = 'YES' ;";
+        $dataProvider = new SqlDataProvider([
+        'sql' => $query,
+//            'params' => '',
+//            'totalCount' => 1000000,
+//            'pagination' => ['pageSize' => 20,],
+        ]);
 
         return $dataProvider;
     }
