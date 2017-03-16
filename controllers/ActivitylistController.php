@@ -51,22 +51,21 @@ class ActivitylistController extends Controller
     public function actionOrderList()
     {
         $this->layout = "main_website";
-         $session = Yii::$app->session;
-         if (!isset($session['openid']) && empty($session['openid'])){
+        $session = Yii::$app->session;
+        $user = new Activityuser();
+        //       $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+        if (!isset($session['openid']) && empty($session['openid'])){
              $appID = Yii::$app->params['WxAppID'];
              $secret = Yii::$app->params['WxSecret'];
              $UserInfo =  $this->getUserInfo($appID,$secret);
              $openid = $UserInfo['openid'];
              $session->set('openid', $openid);
-         }else{
-             $openid = $session['openid'];
-         }
-        //test
-        $user = new Activityuser();
-//       $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
-        $UserInfo = $user->findUserByOpenID($openid);
-        $searchModel = new ActivitylistSearch();
+        }else{
+            $openid = $session['openid'];
+            $UserInfo = $user->findUserByOpenIDOne($openid);
+        }
 
+        $searchModel = new ActivitylistSearch();
 
         $params = array('ActivitylistSearch' => array('UserID'=>$UserInfo['UserID']));
         Yii::$app->request->setQueryParams($params);
@@ -97,6 +96,13 @@ class ActivitylistController extends Controller
      * @return mixed
      */
     public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    public function actionActivityDetail($id)
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
