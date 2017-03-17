@@ -53,8 +53,8 @@ class ActivitylistController extends Controller
         $this->layout = "main_website";
         $session = Yii::$app->session;
         $user = new Activityuser();
-            $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
-            $session->set('openid', $openid);
+//            $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+//            $session->set('openid', $openid);
         if (!isset($session['openid']) && empty($session['openid'])){
              $appID = Yii::$app->params['WxAppID'];
              $secret = Yii::$app->params['WxSecret'];
