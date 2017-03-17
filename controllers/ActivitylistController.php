@@ -53,7 +53,8 @@ class ActivitylistController extends Controller
         $this->layout = "main_website";
         $session = Yii::$app->session;
         $user = new Activityuser();
-        //       $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+            $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+            $session->set('openid', $openid);
         if (!isset($session['openid']) && empty($session['openid'])){
              $appID = Yii::$app->params['WxAppID'];
              $secret = Yii::$app->params['WxSecret'];
@@ -102,10 +103,21 @@ class ActivitylistController extends Controller
         ]);
     }
 
-    public function actionActivityDetail($id)
+    public function actionActivityDetail()
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
+
+        $this->layout = "main_website";
+        $Order  = new Activityorder();
+        $Params = Yii::$app->request->get();
+        $ActivityID = $Params['ActivityID'];
+        $UserID = $Params['UserID'];
+        $res = $Order->findOrderByID($Params);
+        $HasOrder = $res ?'YES':'NO';
+
+        return $this->render('ActivityDetail', [
+            'model' => $this->findModel($ActivityID),
+            'HasOrder' => $HasOrder,
+            'UserID' => $UserID
         ]);
     }
 

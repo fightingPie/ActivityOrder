@@ -2,7 +2,11 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'My Yii Application';
+use yii\helpers\Url;
+$this->title = '活动预定';
+$this->registerCssFile('@web/css/index.css',['depends'=>['app\assets\AppAssetAO']]);
+$this->registerCssFile('@web/css/global.css',['depends'=>['app\assets\AppAssetAO']]);
+$this->registerCssFile('@web/css/images_turn.css',['depends'=>['app\assets\AppAssetAO']]);
 ?>
 <?php
 //$model = $dataProvider;
@@ -34,20 +38,23 @@ $this->title = 'My Yii Application';
                     }else{
                         $HasOder = '<font class="sign_up" onclick="signUp('.$item['ID'].','.$UserInfo['UserID'].')">报 名</font>';
                     }
+                    $TagArr = explode(',',$item['Tag']);
+                    $TagStr = '';
+                    foreach ($TagArr as $Tag) {
+                        if (!empty($Tag)) $TagStr .= '<div><font>'.$Tag.'</font></div>';
+                    }
+                    
+                    $DetailUrl = Url::toRoute(['activitylist/activity-detail','ActivityID'=>$item['ID'],'UserID'=>$UserInfo['UserID']]);
+                    $ActivityImg = Url::to('@web/image/Activity/'.$item['Logo']);
                     echo '<div class="img_mid">
-                <img src="../image/Activity/0824ab18972bd407154c5f4b73899e510eb309f8.jpg"/>
+                <a href="'.$DetailUrl.'"><img src="'.$ActivityImg.'"/></a>
                 <div class="content">
                     <div class="content_left">
                         <div class="content_title">
                             <font>'.$item['Name'].'</font>
                         </div>
                         <div class="content_style">
-                            <div>
-                                <font>拓景</font>
-                            </div>
-                            <div>
-                                <font>定向</font>
-                            </div>
+                            '.$TagStr.'
                         </div>
                         <div class="time">
                             <font>时间:'.date('Y.m.d',strtotime($item['StartTime'])).'-'.date('Y.m.d',strtotime($item['EndTime'])).'</font>

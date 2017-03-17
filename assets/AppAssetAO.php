@@ -18,10 +18,6 @@ class AppAssetAO extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'css/site.css',
-        'css/global.css',
-        'css/images_turn.css',
-        'css/index.css',
     ];
     public $js = [
         'js/jquery-1.8.0.js',
