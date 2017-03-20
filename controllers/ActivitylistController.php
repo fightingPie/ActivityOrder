@@ -4,9 +4,11 @@ namespace app\controllers;
 
 use app\models\Activityorder;
 use app\models\Activityuser;
+use vova07\imperavi\actions\GetAction;
 use Yii;
 use app\models\Activitylist;
 use app\models\ActivitylistSearch;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -28,6 +30,32 @@ class ActivitylistController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+        ];
+    }
+
+    public function actions()
+    {
+        $ActivityUploadImg = Url::to('./image/Activity/desc/');
+        $ActivityImg = Url::to('@web/image/Activity/desc/');
+        return [
+            'image-upload' => [
+                'class' => 'vova07\imperavi\actions\UploadAction',
+                // Directory URL address, where files are stored.
+                'url' => $ActivityUploadImg,
+                // Or absolute path to directory where files are stored.
+                'path' => $ActivityUploadImg,
+                'validatorOptions' => [
+//                    'maxWidth' => 1000,
+//                    'maxHeight' => 1000,
+                    'maxSize' => 15000000,
+                ]
+            ],
+            'images-get' => [
+                'class' => 'vova07\imperavi\actions\GetAction',
+                'url' => $ActivityImg, // Directory URL address, where files are stored.
+                'path' => $ActivityImg, // Or absolute path to directory where files are stored.
+                'type' => GetAction::TYPE_IMAGES,
+            ]
         ];
     }
 

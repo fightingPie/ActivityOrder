@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use vova07\imperavi\Widget as Redactor;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model app\models\Activitylist */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'ID')->textInput() ?>
+    <?php // $form->field($model, 'ID')->textInput() ?>
 
     <?= $form->field($model, 'Name')->textInput(['maxlength' => true]) ?>
 
@@ -26,10 +27,41 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Tag')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Logo')->textInput(['maxlength' => true]) ?>
+    <?php echo  $form->field($model, 'Logo')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Desc')->textarea(['rows' => 6]) ?>
+    <?php
+    echo $form->field($model, 'Desc')->widget(Redactor::className(), [
+//        'selector' => '#my-textarea-id',
 
+        'settings' => [
+            'lang' => 'zh_cn',
+            'minHeight' => 200,
+            'toolbarFixedTopOffset'=> 50 ,
+            'imageUpload' => Url::to(['/activitylist/image-upload']),
+//            'imageManagerJson' => \yii\helpers\Url::to(['/default/images-get']),
+            'plugins' => [
+                'clips',
+                'fullscreen' ,
+                'video',
+                'textdirection',
+                'table',
+                'counter',
+                'definedlinks',
+                'fontsize',
+                'limiter',
+                'textexpander',
+                'fontcolor',
+                'imagemanager',
+                'codemirror',
+                'alignment'
+//                'imagemanager'
+            ]
+        ],
+//        'plugins' => [ 'my-custom-plugin' => 'app\assets\MyPluginBundle' ]
+    ]);
+
+
+    ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

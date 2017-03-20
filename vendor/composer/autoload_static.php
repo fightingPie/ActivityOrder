@@ -25,6 +25,10 @@ class ComposerStaticInit016106fe381bfe2e0995c2a7802172f5
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
+        'v' => 
+        array (
+            'vova07\\imperavi\\' => 16,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -102,6 +106,10 @@ class ComposerStaticInit016106fe381bfe2e0995c2a7802172f5
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'vova07\\imperavi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vova07/yii2-imperavi-widget/src',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (

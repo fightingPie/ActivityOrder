@@ -33,7 +33,7 @@ class Activitylist extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ID', 'Name', 'StartTime', 'EndTime', 'Logo'], 'required'],
+            [[ 'Name', 'StartTime', 'EndTime'], 'required'],
             [['ID'], 'integer'],
             [['Status', 'Desc'], 'string'],
             [['StartTime', 'EndTime'], 'safe'],
