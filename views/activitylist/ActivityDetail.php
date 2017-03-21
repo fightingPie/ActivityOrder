@@ -4,7 +4,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = $model->Name;
+$this->title = '活动详情';
 $this->registerCssFile('@web/css/details.css', ['depends' => ['app\assets\AppAssetAO']]);
 ?>
 
@@ -43,7 +43,7 @@ $this->registerCssFile('@web/css/details.css', ['depends' => ['app\assets\AppAss
                 <div class="content_right">
                     <div class="content_right1">
                         <div class="money">
-                            <font>¥<?= $model->Cost; ?></font>
+                            <font><?php echo $model->Cost =='0'?'免费':'¥'.$model->Cost; ?></font>
                         </div>
                          <div class="bm_button  <?= 'AO_button_'.$model->ID;?>">
                              <?php
@@ -61,11 +61,11 @@ $this->registerCssFile('@web/css/details.css', ['depends' => ['app\assets\AppAss
         </div>
 
         <div id="act_time">
-            <div id="time_title">
-                <p>活动时间:</p>
-            </div>
+<!--            <div id="time_title">-->
+<!--                <p>活动时间:</p>-->
+<!--            </div>-->
             <div id="time">
-                <p><?php echo date('Y.m.d',strtotime($model->StartTime)).'-'.date('Y.m.d',strtotime($model->EndTime)); ?></p>
+                <p>活动时间: <?php echo date('Y.m.d',strtotime($model->StartTime)).'-'.date('Y.m.d',strtotime($model->EndTime)); ?></p>
             </div>
         </div>
         <div id="detail">

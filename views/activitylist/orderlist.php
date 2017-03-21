@@ -43,7 +43,7 @@ $this->registerCssFile('@web/css/images_turn.css',['depends'=>['app\assets\AppAs
                     foreach ($TagArr as $Tag) {
                         if (!empty($Tag)) $TagStr .= '<div><font>'.$Tag.'</font></div>';
                     }
-                    
+                    $Cost = $item['Cost'] =='0'?'免费':'¥'.$item['Cost'];
                     $DetailUrl = Url::toRoute(['activitylist/activity-detail','ActivityID'=>$item['ID'],'UserID'=>$UserInfo['UserID']]);
                     $ActivityImg = Url::to('@web/image/Activity/'.$item['Logo']);
                     echo '<div class="img_mid">
@@ -63,7 +63,7 @@ $this->registerCssFile('@web/css/images_turn.css',['depends'=>['app\assets\AppAs
                     <div class="content_right">
                         <div class="content_right1">
                             <div class="money">
-                                <font>¥'.$item['Cost'].'</font>
+                                <font>'.$Cost.'</font>
                             </div>
                             <div class="bm_button AO_button_'.$item['ID'].'">
                                     '.$HasOder.'
