@@ -11,7 +11,7 @@ use yii\helpers\Url;
 
 <div class="activitylist-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => [ 'enctype' => 'multipart/form-data' ]]); ?>
 
     <?php // $form->field($model, 'ID')->textInput() ?>
 
@@ -27,9 +27,11 @@ use yii\helpers\Url;
 
     <?= $form->field($model, 'Tag')->textInput(['maxlength' => true]) ?>
 
-    <?php echo  $form->field($model, 'Logo')->textInput(['maxlength' => true]) ?>
+    <?php echo  $form->field($model, 'Logo')->fileInput() ?>
 
     <?php
+
+
     echo $form->field($model, 'Desc')->widget(Redactor::className(), [
 //        'selector' => '#my-textarea-id',
 

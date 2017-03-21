@@ -35,8 +35,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'StartTime',
             'EndTime',
             'Tag',
-            'Logo',
+            [
+                'attribute' => 'Logo',
+                'format'=>['image',['width'=>'50%','height'=>'60%']],
+                'value' => \yii\helpers\Url::to('@web/image/Activity/'.$model->Logo)
+            ],
             'Desc:ntext',
+
         ],
     ]) ?>
 

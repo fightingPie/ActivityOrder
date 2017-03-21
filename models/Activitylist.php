@@ -37,7 +37,7 @@ class Activitylist extends \yii\db\ActiveRecord
             [['ID'], 'integer'],
             [['Status', 'Desc'], 'string'],
             [['StartTime', 'EndTime'], 'safe'],
-            [['Name', 'Category', 'Tag', 'Logo'], 'string', 'max' => 255],
+            [['Name', 'Category', 'Tag'], 'string', 'max' => 255],
         ];
     }
 

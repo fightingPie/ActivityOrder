@@ -12,6 +12,7 @@ use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * ActivitylistController implements the CRUD actions for Activitylist model.
@@ -157,7 +158,11 @@ class ActivitylistController extends Controller
     public function actionCreate()
     {
         $model = new Activitylist();
-
+        $imageUploadFile = UploadedFile::getInstance($model, 'Logo');
+        if ($imageUploadFile != null) {
+            $saveUrl = $this->UploadImg($imageUploadFile);
+            $model->Logo = $saveUrl;
+        }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->ID]);
         } else {
@@ -176,6 +181,15 @@ class ActivitylistController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+
+        $ImgLogo  = $model->Logo;
+        $imageUploadFile = UploadedFile::getInstance($model,'Logo');
+        if ($imageUploadFile != null) {
+            $saveUrl = $this->UploadImg($imageUploadFile);
+            $model->Logo = $saveUrl;
+        }else{
+            $model->Logo = $ImgLogo;
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->ID]);
@@ -265,5 +279,61 @@ class ActivitylistController extends Controller
         $output = curl_exec($ch);
         curl_close($ch);
         return json_decode($output, true);
+    }
+
+    private function UploadImg($imageUploadFile){
+//        $helper = new Helper();
+        if ($imageUploadFile == null)
+        {
+            return null;
+        }
+        $imageFileExt = strtolower($imageUploadFile->getExtension());
+        $save_path    = \Yii::$app->params['img_logo'];
+        if (!file_exists($save_path))
+        {
+            mkdir($save_path, 0777, true);
+        }
+        $img_prefix    = time();
+        $imageFileName = $img_prefix . '.' . $imageFileExt;
+        $tmp_path = $imageUploadFile->tempName;
+        $dst_w=200;
+        $dst_w2=294;
+        $this->disposeImgAction($tmp_path, $dst_w, $save_path, $imageFileName);
+//        $this->disposeImgAction($tmp_path, $dst_w2, $save_path, 'b_'.$imageFileName);
+        $imageUploadFile->saveAs($save_path .'/'.$imageFileName);
+        return  $imageFileName;
+    }
+
+    private static function disposeImgAction($tmp_path, $dst_w, $file_path, $file_name)
+    {
+        $arr=getimagesize($tmp_path);
+        $src_w=$arr[0];
+        $src_h=$arr[1];
+        $type=$arr[2];
+        switch($type){
+            case 1:$src_im = imagecreatefromgif($tmp_path);break;
+            case 2:$src_im = imagecreatefromjpeg($tmp_path);break;
+            case 3:$src_im = imagecreatefrompng($tmp_path);break;
+            // default:UtlsSvc::showMsg('不支持该图片类型','/coinproduct/index/');
+        }
+
+        if ($dst_w == 200) {
+            $dst_h = 50;
+        } elseif ($dst_w == 150) {
+            $dst_h = 44;
+        } elseif ($dst_w == 120) {
+            $dst_h = 30;
+        }elseif ($dst_w == 294) {
+            $dst_h = 82;
+        }
+
+        $dst_im=imagecreatetruecolor($dst_w,$dst_h);
+        $white = imagecolorallocate($dst_im, 255, 255, 255);
+        imagefill($dst_im, 0, 0, $white);
+        imagecopyresized($dst_im,$src_im,0,0,0,0,$dst_w,$dst_h,$src_w,$src_h);
+        imagejpeg($dst_im, $file_path.'/'.$file_name);
+
+        ImageDestroy ($src_im);
+        ImageDestroy ($dst_im);
     }
 }
