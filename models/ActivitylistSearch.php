@@ -20,7 +20,7 @@ class ActivitylistSearch extends Activitylist
     {
         return [
             [['ID'], 'integer'],
-            [['Name', 'Category', 'Status', 'StartTime', 'EndTime', 'Tag', 'Logo', 'Desc'], 'safe'],
+            [['Name', 'Category', 'Status', 'Type' , 'StartTime', 'EndTime', 'Tag', 'Logo', 'Desc'], 'safe'],
         ];
     }
 
@@ -72,6 +72,7 @@ class ActivitylistSearch extends Activitylist
         $query->andFilterWhere(['like', 'Name', $this->Name])
             ->andFilterWhere(['like', 'Category', $this->Category])
             ->andFilterWhere(['like', 'Status', $this->Status])
+            ->andFilterWhere(['like', 'Type', $this->Type])
             ->andFilterWhere(['like', 'Tag', $this->Tag])
             ->andFilterWhere(['like', 'Logo', $this->Logo])
             ->andFilterWhere(['like', 'Desc', $this->Desc]);

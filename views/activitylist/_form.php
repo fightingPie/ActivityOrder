@@ -14,7 +14,7 @@ use yii\helpers\Url;
     <?php $form = ActiveForm::begin(['options' => [ 'enctype' => 'multipart/form-data' ]]); ?>
 
     <?php // $form->field($model, 'ID')->textInput() ?>
-    <?= $form->field($model, 'Type')->dropDownList([ 'Banner' => 'Banner', 'List' => 'List', ], ['prompt' => 'List']) ?>
+    <?= $form->field($model, 'Type')->dropDownList([ 'Banner' => 'Banner', 'List' => 'List', ]) ?>
 
     <?= $form->field($model, 'Name')->textInput(['maxlength' => true]) ?>
 
