@@ -82,8 +82,12 @@ class ActivitylistController extends Controller
         $this->layout = "main_website";
         $session = Yii::$app->session;
         $user = new Activityuser();
-//            $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
-//            $session->set('openid', $openid);
+
+//        $openid ='oiqKit-Uv7d3bEyN1Qb3N0nsWBpU';
+//        $session->set('openid', $openid);
+//        $openid = $session['openid'];
+//        $UserInfo = $user->findUserByOpenIDOne($openid);
+
         if (!isset($session['openid']) && empty($session['openid'])){
              $appID = Yii::$app->params['WxAppID'];
              $secret = Yii::$app->params['WxSecret'];
@@ -97,15 +101,20 @@ class ActivitylistController extends Controller
 
         $searchModel = new ActivitylistSearch();
 
-        $params = array('ActivitylistSearch' => array('UserID'=>$UserInfo['UserID']));
-        Yii::$app->request->setQueryParams($params);
+        $paramsList = array('ActivitylistSearch' => array('UserID'=>$UserInfo['UserID'],'Type'=>'List'));
+        Yii::$app->request->setQueryParams($paramsList);
+        $dataProviderList = $searchModel->searchActList(Yii::$app->request->queryParams);
+        $ActivityList = $dataProviderList->getModels();
 
-        $dataProvider = $searchModel->searchActList(Yii::$app->request->queryParams);
-        $ActivityList = $dataProvider->getModels();
+        $paramsBanner = array('ActivitylistSearch' => array('UserID'=>$UserInfo['UserID'],'Type'=>'Banner'));
+        Yii::$app->request->setQueryParams($paramsBanner);
+        $dataProviderBanner = $searchModel->searchActList(Yii::$app->request->queryParams);
+        $ActivityBanner = $dataProviderBanner->getModels();
 
         return $this->render('orderlist', [
             'searchModel' => $searchModel,
             'ActivityList' => $ActivityList,
+            'ActivityBanner' => $ActivityBanner,
             'UserInfo' => $UserInfo,
         ]);
     }

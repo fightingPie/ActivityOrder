@@ -35,7 +35,7 @@ class Activitylist extends \yii\db\ActiveRecord
         return [
             [[ 'Name', 'StartTime', 'EndTime'], 'required'],
             [['ID'], 'integer'],
-            [['Status', 'Desc'], 'string'],
+            [['Status','Type', 'Desc'], 'string'],
             [['StartTime', 'EndTime'], 'safe'],
             [['Name', 'Category', 'Tag'], 'string', 'max' => 255],
         ];
@@ -49,6 +49,7 @@ class Activitylist extends \yii\db\ActiveRecord
         return [
             'ID' => '活动号',
             'Name' => '活动名',
+            'Type' => '活动位置',
             'Category' => '类别',
             'Status' => '在线状态',
             'StartTime' => '开始时间',
