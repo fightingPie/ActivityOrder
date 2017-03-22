@@ -47,15 +47,15 @@ class Activitylist extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'Name' => 'Name',
-            'Category' => 'Category',
-            'Status' => 'Status',
-            'StartTime' => 'Start Time',
-            'EndTime' => 'End Time',
-            'Tag' => 'Tag',
+            'ID' => '活动号',
+            'Name' => '活动名',
+            'Category' => '类别',
+            'Status' => '在线状态',
+            'StartTime' => '开始时间',
+            'EndTime' => '结束时间',
+            'Tag' => '标签',
             'Logo' => 'Logo',
-            'Desc' => 'Desc',
+            'Desc' => '活动描述',
         ];
     }
 }

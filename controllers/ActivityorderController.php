@@ -37,7 +37,7 @@ class ActivityorderController extends Controller
     {
         $searchModel = new ActivityorderSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+//var_dump($dataProvider);exit();
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

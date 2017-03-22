@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'OrderID',
-            'UserID',
-            'ActivityID',
+            [
+                'label'=>'User',
+                'value'=> $model->user->nickname
+            ],
+            [
+                'label'=>'Activity',
+                'value'=> $model->activity->Name
+            ],
             'PayStatus',
             'AddTime',
         ],

@@ -22,8 +22,18 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'OrderID',
-            'UserID',
-            'ActivityID',
+            [
+                'attribute' => 'UserID',
+                'value'=>function ($model, $key, $index, $column) {
+                    return $model->user->nickname;
+                }
+            ],
+            [
+                'attribute' => 'ActivityID',
+                'value'=>function ($model, $key, $index, $column) {
+                    return $model->activity->Name;
+                }
+            ],
             'PayStatus',
             'AddTime',
 

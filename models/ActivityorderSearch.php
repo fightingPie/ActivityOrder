@@ -18,8 +18,8 @@ class ActivityorderSearch extends Activityorder
     public function rules()
     {
         return [
-            [['OrderID', 'UserID', 'ActivityID'], 'integer'],
-            [['PayStatus', 'AddTime'], 'safe'],
+            [['OrderID', ], 'integer'],
+            [['PayStatus','UserID', 'ActivityID', 'AddTime'], 'safe'],
         ];
     }
 
@@ -42,7 +42,7 @@ class ActivityorderSearch extends Activityorder
     public function search($params)
     {
         $query = Activityorder::find();
-
+        $query->joinWith(['user'])->joinWith(['activity']);
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
@@ -60,12 +60,14 @@ class ActivityorderSearch extends Activityorder
         // grid filtering conditions
         $query->andFilterWhere([
             'OrderID' => $this->OrderID,
-            'UserID' => $this->UserID,
-            'ActivityID' => $this->ActivityID,
+//            'UserID' => $this->UserID,
+//            'ActivityID' => $this->ActivityID,
             'AddTime' => $this->AddTime,
         ]);
 
         $query->andFilterWhere(['like', 'PayStatus', $this->PayStatus]);
+        $query->andFilterWhere(['like', 'activityuser.nickname', $this->UserID]);
+        $query->andFilterWhere(['like', 'activitylist.Name', $this->ActivityID]);
 
         return $dataProvider;
     }

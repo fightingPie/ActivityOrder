@@ -41,11 +41,11 @@ class Activityorder extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'OrderID' => 'Order ID',
-            'UserID' => 'User ID',
-            'ActivityID' => 'Activity ID',
-            'PayStatus' => 'Pay Status',
-            'AddTime' => 'Add Time',
+            'OrderID' => '订单号',
+            'UserID' => '用户',
+            'ActivityID' => '活动',
+            'PayStatus' => '支付状态',
+            'AddTime' => '预定时间',
         ];
     }
 
@@ -65,5 +65,13 @@ class Activityorder extends \yii\db\ActiveRecord
         $this->AddTime =  date('Y-m-d H:i:s');
         $res = $this->save();
         return $res;
+    }
+
+    public function getUser(){
+        return $this->hasOne(Activityuser::className(),['UserID'=>'UserID']);
+    }
+
+    public function getActivity(){
+        return $this->hasOne(Activitylist::className(),['ID'=>'ActivityID']);
     }
 }
