@@ -1,0 +1,858 @@
+2017-03-11 06:28:11 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "activity-list". in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activity-list', Array)
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-11 06:28:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'activity-list'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '842b206ce83da00bf03bc0b73234ec651d399cfea1e4504b4b0b5d659b4ba066a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"2aLnrxY4RuqQ3sLniSr11SZPgVhQ1KIS\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=842b206ce83da00bf03bc0b73234ec651d399cfea1e4504b4b0b5d659b4ba066a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222aLnrxY4RuqQ3sLniSr11SZPgVhQ1KIS%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '54760'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activity-list'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activity-list'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489210091.225
+    'REQUEST_TIME' => 1489210091
+]
+2017-03-11 06:28:38 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'activitorder' in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('activitylist')
+#10 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('activitylist')
+#11 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('ID')
+#14 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('ID')
+#15 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(app\models\ActivitylistSearch), Array)
+#16 D:\www\AO\ActivityOrder\models\ActivitylistSearch.php(58): yii\base\Model->validate()
+#17 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(39): app\models\ActivitylistSearch->search(Array)
+#18 [internal function]: app\controllers\ActivitylistController->actionIndex()
+#19 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#21 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#22 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist', Array)
+#23 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#25 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'activitorder' in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('activitylist')
+#8 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('activitylist')
+#9 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('ID')
+#12 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('ID')
+#13 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(app\models\ActivitylistSearch), Array)
+#14 D:\www\AO\ActivityOrder\models\ActivitylistSearch.php(58): yii\base\Model->validate()
+#15 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(39): app\models\ActivitylistSearch->search(Array)
+#16 [internal function]: app\controllers\ActivitylistController->actionIndex()
+#17 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#20 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist', Array)
+#21 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-03-11 06:28:38 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '842b206ce83da00bf03bc0b73234ec651d399cfea1e4504b4b0b5d659b4ba066a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"2aLnrxY4RuqQ3sLniSr11SZPgVhQ1KIS\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=842b206ce83da00bf03bc0b73234ec651d399cfea1e4504b4b0b5d659b4ba066a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222aLnrxY4RuqQ3sLniSr11SZPgVhQ1KIS%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '54781'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489210118.415
+    'REQUEST_TIME' => 1489210118
+]
+2017-03-15 14:27:05 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: ID in D:\www\AO\ActivityOrder\views\activitylist\orderlist.php:35
+Stack trace:
+#0 D:\www\AO\ActivityOrder\views\activitylist\orderlist.php(35): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\www\\AO\\Activ...', 35, Array)
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\View.php(328): require('D:\\www\\AO\\Activ...')
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\www\\AO\\Activ...', Array)
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\www\\AO\\Activ...', Array, Object(app\controllers\ActivitylistController))
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('orderlist', Array, Object(app\controllers\ActivitylistController))
+#5 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(79): yii\base\Controller->render('orderlist', Array)
+#6 [internal function]: app\controllers\ActivitylistController->actionOrderList()
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-list', Array)
+#10 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#11 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-15 14:27:04 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-list'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58259'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-list'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489584424.884
+    'REQUEST_TIME' => 1489584424
+]
+2017-03-15 14:38:37 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Controller.php:166
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#5 {main}
+2017-03-15 14:38:37 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+]
+
+$_POST = [
+    'ActivityID' => '3'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58573'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activitylist/order-activity'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489585117.4
+    'REQUEST_TIME' => 1489585117
+]
+2017-03-15 14:39:07 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Controller.php:166
+Stack trace:
+#0 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#5 {main}
+2017-03-15 14:39:07 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+]
+
+$_POST = [
+    'ActivityID' => '3'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58590'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=activitylist/order-activity'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489585147.866
+    'REQUEST_TIME' => 1489585147
+]
+2017-03-15 14:47:32 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected 'var_dump' (T_STRING) in D:\www\AO\ActivityOrder\controllers\ActivitylistController.php:87
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(633): class_exists('app\\controllers...')
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(591): yii\base\Module->createControllerByID('activitylist')
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(517): yii\base\Module->createController('order-activity')
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-15 14:47:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489585651.998
+    'REQUEST_TIME' => 1489585651
+]
+2017-03-15 14:56:29 [::1][-][-][error][Error] Error: Call to a member function toArray() on null in D:\www\AO\ActivityOrder\models\Activityorder.php:56
+Stack trace:
+#0 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(88): app\models\Activityorder->findOrderByID(Array)
+#1 [internal function]: app\controllers\ActivitylistController->actionOrderActivity()
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-15 14:56:29 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '59019'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489586189.076
+    'REQUEST_TIME' => 1489586189
+]
+2017-03-15 14:57:10 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: UserID in D:\www\AO\ActivityOrder\models\Activityorder.php:63
+Stack trace:
+#0 D:\www\AO\ActivityOrder\models\Activityorder.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\www\\AO\\Activ...', 63, Array)
+#1 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(90): app\models\Activityorder->saveData(Array)
+#2 [internal function]: app\controllers\ActivitylistController->actionOrderActivity()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-15 14:57:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '59039'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489586230.386
+    'REQUEST_TIME' => 1489586230
+]
+2017-03-15 14:57:49 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: UserID in D:\www\AO\ActivityOrder\models\Activityorder.php:63
+Stack trace:
+#0 D:\www\AO\ActivityOrder\models\Activityorder.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\www\\AO\\Activ...', 63, Array)
+#1 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(90): app\models\Activityorder->saveData(Array)
+#2 [internal function]: app\controllers\ActivitylistController->actionOrderActivity()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-15 14:57:49 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UseID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '59058'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UseID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489586269.137
+    'REQUEST_TIME' => 1489586269
+]
+2017-03-15 14:58:21 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: UseID in D:\www\AO\ActivityOrder\models\Activityorder.php:55
+Stack trace:
+#0 D:\www\AO\ActivityOrder\models\Activityorder.php(55): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\www\\AO\\Activ...', 55, Array)
+#1 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(88): app\models\Activityorder->findOrderByID(Array)
+#2 [internal function]: app\controllers\ActivitylistController->actionOrderActivity()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-15 14:58:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UserID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '59080'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UserID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UserID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489586301.07
+    'REQUEST_TIME' => 1489586301
+]
+2017-03-15 14:58:41 [::1][-][-][error][Error] Error: Call to a member function toArray() on null in D:\www\AO\ActivityOrder\models\Activityorder.php:56
+Stack trace:
+#0 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(88): app\models\Activityorder->findOrderByID(Array)
+#1 [internal function]: app\controllers\ActivitylistController->actionOrderActivity()
+#2 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-activity', Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-15 14:58:41 [::1][-][-][info][application] $_GET = [
+    'r' => 'activitylist/order-activity'
+    'ActivityID' => '5'
+    'UserID' => '1'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '59098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-activity&ActivityID=5&UserID=1'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-activity&ActivityID=5&UserID=1'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489586321.085
+    'REQUEST_TIME' => 1489586321
+]
+2017-03-15 16:06:34 [::1][-][jhf1h3c1sseq2c3a16i8e3u800][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: openid in D:\www\AO\ActivityOrder\controllers\ActivitylistController.php:196
+Stack trace:
+#0 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(196): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\www\\AO\\Activ...', 196, Array)
+#1 D:\www\AO\ActivityOrder\controllers\ActivitylistController.php(58): app\controllers\ActivitylistController->getUserInfo('wx9c7e34f86b42b...', '46f5ce3bd690eef...')
+#2 [internal function]: app\controllers\ActivitylistController->actionOrderList()
+#3 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('order-list', Array)
+#6 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activitylist/or...', Array)
+#7 D:\www\AO\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\www\AO\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-15 16:06:33 [::1][-][jhf1h3c1sseq2c3a16i8e3u800][info][application] $_GET = [
+    'r' => 'activitylist/order-list'
+]
+
+$_COOKIE = [
+    '_identity' => 'fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"3\",null,2592000]\";}'
+    '_csrf' => '24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity=fc0b7ec5526e6e137c0f77d212f2d2fb24ad7645263f3d940796852c36bb701ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%223%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf=24bd9e61cdc7f1e31a0d0846b8f4ffc924156646ead16fc48ab85bc02a692a2aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dzYIuF2pQT7hCjVsiY0KC29qUQl5s5QF%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files (x86)\\PuTTY;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\APie\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/AO/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '61860'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activitylist/order-list'
+    'REQUEST_URI' => '/AO/ActivityOrder/web/?r=activitylist/order-list'
+    'SCRIPT_NAME' => '/AO/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/AO/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1489590392.689
+    'REQUEST_TIME' => 1489590392
+]

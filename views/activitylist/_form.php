@@ -17,6 +17,8 @@ use yii\helpers\Url;
     <?= $form->field($model, 'Type')->dropDownList([ 'Banner' => 'Banner', 'List' => 'List', ]) ?>
 
     <?= $form->field($model, 'Name')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'Cost')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'Category')->textInput(['maxlength' => true]) ?>
 

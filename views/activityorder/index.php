@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'UserID',
                 'value'=>function ($model, $key, $index, $column) {
+//        var_dump($model->user->nickname);exit();
                     return $model->user->nickname;
                 }
             ],
