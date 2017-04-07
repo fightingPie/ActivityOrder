@@ -856,3 +856,446 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1489590392.689
     'REQUEST_TIME' => 1489590392
 ]
+2017-04-06 09:04:53 [::1][-][2e8vvncbl1ufta7u0do11rs589][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'UserID' in where clause is ambiguous in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(166): yii\db\Query->count('*', NULL)
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(149): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(81): yii\data\ActiveDataProvider->prepareModels()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(94): yii\data\BaseDataProvider->prepare()
+#10 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(76): yii\data\BaseDataProvider->getModels()
+#11 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#15 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#16 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'UserID' in where clause is ambiguous
+The SQL being executed was: SELECT COUNT(*) FROM `activityorder` LEFT JOIN `activityuser` ON `activityorder`.`UserID` = `activityuser`.`UserID` LEFT JOIN `activitylist` ON `activityorder`.`ActivityID` = `activitylist`.`ID` WHERE `UserID`=1 in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(166): yii\db\Query->count('*', NULL)
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(149): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(81): yii\data\ActiveDataProvider->prepareModels()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(94): yii\data\BaseDataProvider->prepare()
+#10 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(76): yii\data\BaseDataProvider->getModels()
+#11 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#15 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#16 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#18 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'UserID' in where clause is ambiguous
+)
+
+2017-04-06 09:04:53 [::1][-][2e8vvncbl1ufta7u0do11rs589][info][application] $_GET = [
+    'r' => 'activityorder/my-orders'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2e8vvncbl1ufta7u0do11rs589'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'openid' => 'oiqKit-Uv7d3bEyN1Qb3N0nsWBpU'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2e8vvncbl1ufta7u0do11rs589'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\Program Files\\nodejs\\;E:\\Program Files\\Git\\cmd;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\phuang\\AppData\\Roaming\\npm;C:\\Users\\phuang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/test/ActOrder/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58719'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activityorder/my-orders'
+    'REQUEST_URI' => '/test/ActOrder/ActivityOrder/web/index.php?r=activityorder/my-orders'
+    'SCRIPT_NAME' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1491462293.481
+    'REQUEST_TIME' => 1491462293
+]
+2017-04-06 09:05:00 [::1][-][2e8vvncbl1ufta7u0do11rs589][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'UserID' in where clause is ambiguous in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(166): yii\db\Query->count('*', NULL)
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(149): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(81): yii\data\ActiveDataProvider->prepareModels()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(94): yii\data\BaseDataProvider->prepare()
+#10 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(76): yii\data\BaseDataProvider->getModels()
+#11 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#15 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#16 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'UserID' in where clause is ambiguous
+The SQL being executed was: SELECT COUNT(*) FROM `activityorder` LEFT JOIN `activityuser` ON `activityorder`.`UserID` = `activityuser`.`UserID` LEFT JOIN `activitylist` ON `activityorder`.`ActivityID` = `activitylist`.`ID` WHERE `UserID`=1 in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(431): yii\db\Command->queryScalar()
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(166): yii\db\Query->count('*', NULL)
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(149): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(81): yii\data\ActiveDataProvider->prepareModels()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\data\BaseDataProvider.php(94): yii\data\BaseDataProvider->prepare()
+#10 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(76): yii\data\BaseDataProvider->getModels()
+#11 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#14 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#15 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#16 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#18 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'UserID' in where clause is ambiguous
+)
+
+2017-04-06 09:05:00 [::1][-][2e8vvncbl1ufta7u0do11rs589][info][application] $_GET = [
+    'r' => 'activityorder/my-orders'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2e8vvncbl1ufta7u0do11rs589'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'openid' => 'oiqKit-Uv7d3bEyN1Qb3N0nsWBpU'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2e8vvncbl1ufta7u0do11rs589'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\Program Files\\nodejs\\;E:\\Program Files\\Git\\cmd;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\phuang\\AppData\\Roaming\\npm;C:\\Users\\phuang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/test/ActOrder/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58723'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activityorder/my-orders'
+    'REQUEST_URI' => '/test/ActOrder/ActivityOrder/web/index.php?r=activityorder/my-orders'
+    'SCRIPT_NAME' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1491462300
+    'REQUEST_TIME' => 1491462300
+]
+2017-04-06 09:09:10 [::1][-][2e8vvncbl1ufta7u0do11rs589][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Activityorder::HasOder in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('HasOder')
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('HasOder')
+#2 D:\www\test\ActOrder\ActivityOrder\views\activityorder\myorder.php(52): yii\base\Model->offsetGet('HasOder')
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(328): require('D:\\www\\test\\Act...')
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\www\\test\\Act...', Array)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\www\\test\\Act...', Array, Object(app\controllers\ActivityorderController))
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('myorder', Array, Object(app\controllers\ActivityorderController))
+#7 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(78): yii\base\Controller->render('myorder', Array)
+#8 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-04-06 09:09:10 [::1][-][2e8vvncbl1ufta7u0do11rs589][info][application] $_GET = [
+    'r' => 'activityorder/my-orders'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2e8vvncbl1ufta7u0do11rs589'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'openid' => 'oiqKit-Uv7d3bEyN1Qb3N0nsWBpU'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2e8vvncbl1ufta7u0do11rs589'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\Program Files\\nodejs\\;E:\\Program Files\\Git\\cmd;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\phuang\\AppData\\Roaming\\npm;C:\\Users\\phuang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/test/ActOrder/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58764'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activityorder/my-orders'
+    'REQUEST_URI' => '/test/ActOrder/ActivityOrder/web/index.php?r=activityorder/my-orders'
+    'SCRIPT_NAME' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1491462550.541
+    'REQUEST_TIME' => 1491462550
+]
+2017-04-06 09:10:57 [::1][-][2e8vvncbl1ufta7u0do11rs589][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Activityorder::ID in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('ID')
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('ID')
+#2 D:\www\test\ActOrder\ActivityOrder\views\activityorder\myorder.php(55): yii\base\Model->offsetGet('ID')
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(328): require('D:\\www\\test\\Act...')
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\www\\test\\Act...', Array)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\www\\test\\Act...', Array, Object(app\controllers\ActivityorderController))
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('myorder', Array, Object(app\controllers\ActivityorderController))
+#7 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(78): yii\base\Controller->render('myorder', Array)
+#8 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-04-06 09:10:57 [::1][-][2e8vvncbl1ufta7u0do11rs589][info][application] $_GET = [
+    'r' => 'activityorder/my-orders'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2e8vvncbl1ufta7u0do11rs589'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'openid' => 'oiqKit-Uv7d3bEyN1Qb3N0nsWBpU'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2e8vvncbl1ufta7u0do11rs589'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\Program Files\\nodejs\\;E:\\Program Files\\Git\\cmd;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\phuang\\AppData\\Roaming\\npm;C:\\Users\\phuang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/test/ActOrder/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '58798'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activityorder/my-orders'
+    'REQUEST_URI' => '/test/ActOrder/ActivityOrder/web/index.php?r=activityorder/my-orders'
+    'SCRIPT_NAME' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1491462657.164
+    'REQUEST_TIME' => 1491462657
+]
+2017-04-07 07:21:16 [127.0.0.1][-][232fe0ug4ji04551r8p0d6mdtu][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Activityorder::ID in D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('ID')
+#1 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('ID')
+#2 D:\www\test\ActOrder\ActivityOrder\views\activityorder\myorder.php(55): yii\base\Model->offsetGet('ID')
+#3 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(328): require('D:\\www\\test\\Act...')
+#4 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\www\\test\\Act...', Array)
+#5 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\www\\test\\Act...', Array, Object(app\controllers\ActivityorderController))
+#6 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('myorder', Array, Object(app\controllers\ActivityorderController))
+#7 D:\www\test\ActOrder\ActivityOrder\controllers\ActivityorderController.php(78): yii\base\Controller->render('myorder', Array)
+#8 [internal function]: app\controllers\ActivityorderController->actionMyOrders()
+#9 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#11 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('my-orders', Array)
+#12 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('activityorder/m...', Array)
+#13 D:\www\test\ActOrder\ActivityOrder\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\www\test\ActOrder\ActivityOrder\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-04-07 07:21:15 [127.0.0.1][-][232fe0ug4ji04551r8p0d6mdtu][info][application] $_GET = [
+    'r' => 'activityorder/my-orders'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'openid' => 'oiqKit-Uv7d3bEyN1Qb3N0nsWBpU'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\Program Files\\nodejs\\;E:\\Program Files\\Git\\cmd;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\phuang\\AppData\\Roaming\\npm;C:\\Users\\phuang\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/www'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/www/test/ActOrder/ActivityOrder/web/index.php'
+    'REMOTE_PORT' => '52689'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=activityorder/my-orders'
+    'REQUEST_URI' => '/test/ActOrder/ActivityOrder/web/index.php?r=activityorder/my-orders'
+    'SCRIPT_NAME' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'PHP_SELF' => '/test/ActOrder/ActivityOrder/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1491542475.27
+    'REQUEST_TIME' => 1491542475
+]

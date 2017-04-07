@@ -149,13 +149,15 @@ class ActivitylistController extends Controller
         $Params = Yii::$app->request->get();
         $ActivityID = $Params['ActivityID'];
         $UserID = $Params['UserID'];
+        $FromType = isset($Params['FromType'])?$Params['FromType']:'';
         $res = $Order->findOrderByID($Params);
         $HasOrder = $res ?'YES':'NO';
 
         return $this->render('ActivityDetail', [
             'model' => $this->findModel($ActivityID),
             'HasOrder' => $HasOrder,
-            'UserID' => $UserID
+            'UserID' => $UserID,
+            'FromType' => $FromType
         ]);
     }
 

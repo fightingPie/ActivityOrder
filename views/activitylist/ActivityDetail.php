@@ -11,7 +11,14 @@ $this->registerCssFile('@web/css/details.css', ['depends' => ['app\assets\AppAss
 <div id="total">
     <div id="total_position">
         <div id="act_title">
-            <a href="<?= Url::toRoute('activitylist/order-list'); ?>">
+            <a href="<?php
+            if ($FromType == 'MyOrder'){
+                echo Url::toRoute('activityorder/my-orders');
+            }else{
+                echo Url::toRoute('activitylist/order-list');
+            }
+
+            ?>">
                 <div id="detail_back"></div>
             </a>
             <div id="act_title_middle">

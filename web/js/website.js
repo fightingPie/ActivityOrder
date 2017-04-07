@@ -32,10 +32,35 @@ function signUp(ActivityID,UserID) {
             json = $.parseJSON(msg);
 			if (json) {
 				$('.sign_up_'+ActivityID).remove();
-				$('.AO_button_'+ActivityID).html('<font class="registered">已 报 名</font>');				
-			}else{
+				$('.AO_button_'+ActivityID).html('<font class="registered">已 报 名</font>');
+                alert("报名成功");
+
+            }else{
 				alert("Order Error");
 			}
+
+        }
+    });
+}
+
+
+function DelOrder(OrderID) {
+    // alert(OrderID);
+    var savingArr = {
+        'id':OrderID,
+    };
+    $.ajax({
+        type: "GET",
+        url: "/app/web/?r=activityorder/delete-order",
+        data: $.param(savingArr),
+        success: function(msg){
+            json = $.parseJSON(msg);
+            if (json) {
+                alert("取消成功");
+                $('.order_id_'+OrderID).remove();
+            }else{
+                alert("Order Error");
+            }
 
         }
     });

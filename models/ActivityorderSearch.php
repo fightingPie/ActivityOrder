@@ -71,4 +71,37 @@ class ActivityorderSearch extends Activityorder
 
         return $dataProvider;
     }
+
+    public function mySearch($params)
+    {
+        $query = Activityorder::find();
+        $query->joinWith(['user'])->joinWith(['activity']);
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'OrderID' => $this->OrderID,
+            'activityuser.UserID' => $this->UserID,
+            'ActivityID' => $this->ActivityID,
+            'AddTime' => $this->AddTime,
+        ]);
+
+        $query->andFilterWhere(['like', 'PayStatus', $this->PayStatus]);
+//        $query->andFilterWhere(['like', 'activityuser.nickname', $this->UserID]);
+//        $query->andFilterWhere(['like', 'activitylist.Name', $this->ActivityID]);
+
+        return $dataProvider;
+    }
 }
